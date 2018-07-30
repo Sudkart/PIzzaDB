@@ -1,0 +1,82 @@
+
+
+insert into varients(varient) values('Pizzas')
+
+insert into varients(varient) values('Burgers')
+
+insert into varients(varient) values('Sandwich')
+
+insert into varients(varient) values('Snacks')
+
+insert into varients(varient) values('Thick Shakes')
+
+insert into varients(varient) values('Fruit Shakes')
+
+insert into varients(varient) values('Premium Shakes')
+
+insert into varients(varient) values('Mojitos')
+
+
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Lemonade','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Blue Curacao','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Orange','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Mint','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Mint','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Mint','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Mint','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Mint','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Mint','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Mint','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+insert into items (itemname,itemdesc,varient,vegnonveg) values('Mint','',
+(select varient_id from varients where varient='Mojitos'),
+(select dishtype_id from DishTypes where type ='Veg'))
+
+
+
+
+insert into  Sizes(pizzasize) values('Small')
+
+insert into sizes(pizzasize) values('Medium')
+
+insert into sizes(pizzasize) values('Large')
+
+insert into sizes(pizzasize) values ('Normal')
+
+
+insert into DishTypes(type) values('Veg')
+
+insert into DishTypes(type) values('Non-Veg')
+
+
+

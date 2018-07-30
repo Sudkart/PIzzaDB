@@ -1,0 +1,69 @@
+ CREATE TABLE users (
+ user_id serial PRIMARY KEY,
+ username VARCHAR (50) UNIQUE NOT NULL,
+ password VARCHAR (50) NOT NULL,
+ email VARCHAR (355) UNIQUE NOT NULL,
+ createdby varchar(150),
+ createddate date,
+ updatedby varchar(150),
+ updateddate date
+) 
+
+create table varients(
+varient_id serial primary key,
+varient varchar(50)
+)
+
+
+
+ CREATE TABLE items (
+ item_id serial PRIMARY KEY,
+ itemname VARCHAR (250) UNIQUE NOT NULL,
+ itemdesc VARCHAR (500) NOT NULL
+) 
+
+ALTER TABLE items
+ADD COLUMN varient int  NOT null  REFERENCES varients(varient_id);
+
+ALTER TABLE items
+ADD COLUMN vegnonveg int  NOT null  REFERENCES DishTypes(dishtype_id);
+
+
+
+
+create table Sizes(
+size_id serial primary key,
+pizzasize varchar(20) unique not null
+)
+
+
+
+create table DishTypes(
+dishtype_id serial primary key,
+type varchar(10) unique not null
+)
+
+
+
+CREATE TABLE ItemPrice (
+ itemprice_id serial PRIMARY KEY,
+ itemId int  NOT null  REFERENCES items(item_id),
+ price decimal  NOT null
+) 
+
+ALTER TABLE ItemPrice
+ADD COLUMN size int  NOT null  REFERENCES sizes(size_id);
+
+ CREATE TABLE Orders (
+ order_id serial PRIMARY KEY,
+ globalorderid int UNIQUE NOT NULL,
+ sno int unique NOT null,
+ qty int,
+ item int  NOT null  REFERENCES items(item_id),
+ price decimal,
+ totalprice decimal,
+ discount int,
+ totalpriceafterdisctount decimal
+) 
+
+
